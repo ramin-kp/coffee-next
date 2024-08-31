@@ -6,7 +6,7 @@
       "price": 5,
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "score": 5,
-      "off": 0,
+      "off": 50,
       "type": "cold",
       "img": "/images/menu-1.jpg"
     },
@@ -16,7 +16,7 @@
       "price": 4,
       "desc": "Sit lorem ipsum et diam elitr est dolor sed duo guberg sea et et lorem dolor",
       "score": 4.4,
-      "off": 0,
+      "off": 22,
       "type": "hot",
       "img": "/images/menu-2.jpg"
     },
