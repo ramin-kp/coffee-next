@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Footer() {
+  const [email, setEmail] = useState("");
+
+  const clickHandler = (e) => {
+    if (!email) return;
+  };
   return (
     <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
       <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
@@ -70,13 +75,18 @@ function Footer() {
             <div class="input-group">
               <input
                 type="text"
+                value={email}
                 class="form-control border-light"
                 style={{ padding: "25px" }}
                 placeholder="Your Email"
+                onChange={(e) => setEmail(e.target.value)}
               />
               <div class="input-group-append">
-                <button class="btn btn-primary font-weight-bold px-3">
-                  Sign Up
+                <button
+                  class="btn btn-primary font-weight-bold px-3"
+                  onClick={clickHandler}
+                >
+                  Join
                 </button>
               </div>
             </div>
