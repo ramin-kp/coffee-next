@@ -4,7 +4,6 @@ import React from "react";
 import TestimonialItem from "@/components/module/Testimonial/Testimonial";
 
 function Testimonials({ data }) {
-  console.log(data);
   return (
     <div className="container-fluid py-5">
       <div className="container">
@@ -18,7 +17,7 @@ function Testimonials({ data }) {
           <h1 className="display-4">Our Clients Say</h1>
         </div>
         <div className="owl-carousel testimonial-carousel">
-          {data.map((comment) => (
+          {data.slice(0, 5).map((comment) => (
             <TestimonialItem key={comment.id} {...comment} />
           ))}
         </div>

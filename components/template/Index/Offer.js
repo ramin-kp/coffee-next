@@ -19,7 +19,7 @@ function Offer() {
         }
       })
 
-      .catch((error) => console.log(error));
+      .catch((error) => alert(error));
   };
   return (
     <div className="offer container-fluid my-5 py-5 text-center position-relative overlay-top overlay-bottom">

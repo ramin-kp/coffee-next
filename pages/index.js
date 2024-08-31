@@ -31,7 +31,6 @@ export async function getStaticProps() {
 
   const commentsResponse = await fetch("http://localhost:4000/comments");
   const commentsData = await commentsResponse.json();
-  console.log("comments =>", commentsData);
 
   return {
     props: {
