@@ -46,114 +46,113 @@ function ContactDetails() {
   };
 
   return (
-    <div class="container-fluid pt-5">
-      <div class="container">
-        <div class="section-title">
+    <div className="container-fluid pt-5">
+      <div className="container">
+        <div className="section-title">
           <h4
-            class="text-primary text-uppercase"
+            className="text-primary text-uppercase"
             style={{ letterSpacing: "5px" }}
           >
             Contact Us
           </h4>
-          <h1 class="display-4">Feel Free To Contact</h1>
+          <h1 className="display-4">Feel Free To Contact</h1>
         </div>
-        <div class="row px-3 pb-2">
-          <div class="col-sm-4 text-center mb-3">
-            <i class="fa fa-2x fa-map-marker-alt mb-3 text-primary"></i>
-            <h4 class="font-weight-bold">Address</h4>
+        <div className="row px-3 pb-2">
+          <div className="col-sm-4 text-center mb-3">
+            <i className="fa fa-2x fa-map-marker-alt mb-3 text-primary"></i>
+            <h4 className="font-weight-bold">Address</h4>
             <p>123 Street, New York, USA</p>
           </div>
-          <div class="col-sm-4 text-center mb-3">
-            <i class="fa fa-2x fa-phone-alt mb-3 text-primary"></i>
-            <h4 class="font-weight-bold">Phone</h4>
+          <div className="col-sm-4 text-center mb-3">
+            <i className="fa fa-2x fa-phone-alt mb-3 text-primary"></i>
+            <h4 className="font-weight-bold">Phone</h4>
             <p>+012 345 6789</p>
           </div>
-          <div class="col-sm-4 text-center mb-3">
-            <i class="far fa-2x fa-envelope mb-3 text-primary"></i>
-            <h4 class="font-weight-bold">Email</h4>
+          <div className="col-sm-4 text-center mb-3">
+            <i className="far fa-2x fa-envelope mb-3 text-primary"></i>
+            <h4 className="font-weight-bold">Email</h4>
             <p>info@example.com</p>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-6 pb-5">
+        <div className="row">
+          <div className="col-md-6 pb-5">
             <iframe
-              style={{ width: "100%", height: "443px" }}
+              style={{ width: "100%", height: "443px", border: "none" }}
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1663496.3400373347!2d49.255622958637026!3d35.47914079854623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e0184f52c957f%3A0x55b32674bc21ead0!2sTehran%20Province%2C%20Iran!5e0!3m2!1sen!2sbd!4v1725191605956!5m2!1sen!2sbd"
               loading="lazy"
-              frameborder="0"
-              allowfullscreen=""
+              allowFullScreen=""
               aria-hidden="false"
-              tabindex="0"
+              tabIndex="0"
             ></iframe>
           </div>
-          <div class="col-md-6 pb-5">
-            <div class="contact-form">
+          <div className="col-md-6 pb-5">
+            <div className="contact-form">
               <div id="success"></div>
               <form
                 onSubmit={submitHandler}
                 name="sentMessage"
                 id="contactForm"
-                novalidate="novalidate"
+                noValidate="novalidate"
               >
-                <div class="control-group">
+                <div className="control-group">
                   <input
                     type="text"
                     value={message.username}
                     name="username"
                     onChange={changeHandler}
-                    class="form-control bg-transparent p-4"
+                    className="form-control bg-transparent p-4"
                     id="name"
                     placeholder="Your Name"
                     required="required"
                     data-validation-required-message="Please enter your name"
                   />
-                  <p class="help-block text-danger"></p>
+                  <p className="help-block text-danger"></p>
                 </div>
-                <div class="control-group">
+                <div className="control-group">
                   <input
                     type="email"
                     value={message.email}
                     name="email"
                     onChange={changeHandler}
-                    class="form-control bg-transparent p-4"
+                    className="form-control bg-transparent p-4"
                     id="email"
                     placeholder="Your Email"
                     required="required"
                     data-validation-required-message="Please enter your email"
                   />
-                  <p class="help-block text-danger"></p>
+                  <p className="help-block text-danger"></p>
                 </div>
-                <div class="control-group">
+                <div className="control-group">
                   <input
                     type="text"
                     value={message.subject}
                     name="subject"
                     onChange={changeHandler}
-                    class="form-control bg-transparent p-4"
+                    className="form-control bg-transparent p-4"
                     id="subject"
                     placeholder="Subject"
                     required="required"
                     data-validation-required-message="Please enter a subject"
                   />
-                  <p class="help-block text-danger"></p>
+                  <p className="help-block text-danger"></p>
                 </div>
-                <div class="control-group">
+                <div className="control-group">
                   <textarea
                     value={message.body}
                     name="body"
                     onChange={changeHandler}
-                    class="form-control bg-transparent py-3 px-4"
+                    className="form-control bg-transparent py-3 px-4"
                     rows="5"
                     id="message"
                     placeholder="Message"
                     required="required"
                     data-validation-required-message="Please enter your message"
                   ></textarea>
-                  <p class="help-block text-danger"></p>
+                  <p className="help-block text-danger"></p>
                 </div>
                 <div>
                   <button
-                    class="btn btn-primary font-weight-bold py-3 px-5"
+                    className="btn btn-primary font-weight-bold py-3 px-5"
                     type="submit"
                     id="sendMessageButton"
                   >
