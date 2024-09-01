@@ -6,11 +6,10 @@ import ReservationDetails from "@/components/template/Reservation/ReservationDet
 
 function Reservation() {
   return (
-    <div>
+    <>
       <PageHeader title={"Reservation"} href={"reservation"} />
       <ReservationDetails />
-    </div>
+    </>
   );
 }
-
 export default Reservation;

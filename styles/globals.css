@@ -604,6 +604,9 @@ pre code {
   left: 5% !important;
   top: 60% !important;
 }
+.swiper-pagination-bullet-active {
+  background: #da9f5b !important;
+}
 .col-1,
 .col-2,
 .col-3,

@@ -99,9 +99,9 @@ function Footer() {
             </a>
             <a className="btn btn-lg btn-outline-light btn-lg-square" href="#">
               {/* <FontAwesomeIcon
-              icon={Icons.faInstagram}
-              style={{ fontSize: "1.2rem", margin: "0,auto" }}
-            /> */}
+                icon={Icons.faIn}
+                style={{ fontSize: "1.2rem", margin: "0,auto" }}
+              /> */}
               {/* <i className="fab fa-instagram"></i> */}
             </a>
           </div>
