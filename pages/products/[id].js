@@ -10,7 +10,7 @@ function Products({ data }) {
   console.log(route);
   return (
     <>
-      <PageHeader title={"products"} href={`/products/${route.query.id}`} />
+      <PageHeader title={"products"} href={`products/${route.query.id}`} />
       <ProductDetails data={data.menu} />
     </>
   );
@@ -18,7 +18,7 @@ function Products({ data }) {
 export default Products;
 
 export async function getStaticPaths() {
-  const menuResponse = await fetch(`http://localhost:4000/menu/`);
+  const menuResponse = await fetch(`http://localhost:4000/menu`);
 
   const menusData = await menuResponse.json();
 

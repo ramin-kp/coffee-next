@@ -23,11 +23,15 @@ function ProductDetails({ data }) {
         <h4 className="text-white mb-3">{data.title}</h4>
         <hr style={{ borderColor: "white" }} />
         <div className={styles.stars}>
-          {new Array(Math.floor(data.score)).fill().map(() => (
-            <FontAwesomeIcon className={styles.fill_star} icon={faStar} />
+          {new Array(Math.floor(data.score)).fill().map((item, index) => (
+            <FontAwesomeIcon
+              key={index}
+              className={styles.fill_star}
+              icon={faStar}
+            />
           ))}
-          {new Array(5 - Math.floor(data.score)).fill().map(() => (
-            <FontAwesomeIcon icon={faStar} />
+          {new Array(5 - Math.floor(data.score)).fill().map((item, index) => (
+            <FontAwesomeIcon key={index} icon={faStar} />
           ))}
         </div>
         <div className={styles.price_details}>
