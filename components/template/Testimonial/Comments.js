@@ -11,6 +11,8 @@ import styles from "@/styles/products.module.css";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+
+//components
 import TestimonialItem from "@/components/module/Testimonial/Testimonial";
 
 function Comments({ data }) {
