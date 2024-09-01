@@ -18,7 +18,6 @@ function Reservation() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    className = books;
     const name = books.name;
     const email = books.email;
     const date = books.date;

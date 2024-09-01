@@ -1,8 +1,8 @@
 import React from "react";
+import Link from "next/link";
 
 //style
 import styles from "@/styles/navbar.module.css";
-import Link from "next/link";
 
 function Navbar() {
   return (
@@ -10,11 +10,11 @@ function Navbar() {
       <nav
         className={`${styles.navbar} ${styles.navbar_expand_lg} bg-none navbar-dark py-3`}
       >
-        <a href="index.html" className={`${styles.navbar_brand} px-lg-4 m-0`}>
+        <Link href="/" className={`${styles.navbar_brand} px-lg-4 m-0`}>
           <h1 className="m-0 display-4 text-uppercase text-white">
             Next-Coffee
           </h1>
-        </a>
+        </Link>
         <button
           type="button"
           className={`${styles.navbar_toggler}`}
@@ -45,18 +45,24 @@ function Navbar() {
             </Link>
 
             <div className={`${styles.dropdown}`}>
-              <a
+              <Link
                 href="#"
                 className={`${styles.nav_link} ${styles.dropdown_toggle}`}
                 data-toggle="dropdown"
               >
                 Pages
-              </a>
+              </Link>
               <div className={`${styles.dropdown_menu}`}>
-                <Link href="/reservation" className={`${styles.nav_link}`}>
+                <Link
+                  href="/reservation"
+                  className={`${styles.nav_link} ${styles.dropdown_item}`}
+                >
                   Reservation
                 </Link>
-                <Link href="/testimonial" className={`${styles.nav_link}`}>
+                <Link
+                  href="/testimonial"
+                  className={`${styles.nav_link} ${styles.dropdown_item}`}
+                >
                   Testimonial
                 </Link>
               </div>
