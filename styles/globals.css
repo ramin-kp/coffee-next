@@ -7411,3 +7411,12 @@ h6,
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.products_empty_box {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #bd2130;
+  border: solid 2px #8d0916;
+  color: #fffefb;
+  font-size: 1rem;
+}

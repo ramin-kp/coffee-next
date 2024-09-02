@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 
 function Products({ data }) {
   const route = useRouter();
-  console.log(route);
   return (
     <>
       <PageHeader title={"products"} href={`products/${route.query.id}`} />

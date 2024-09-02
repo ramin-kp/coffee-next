@@ -4,7 +4,6 @@ import React from "react";
 import Card from "@/components/module/Card/Card";
 
 function Pricing({ data }) {
-  console.log("menu =>", data);
   return (
     <div className="container-fluid pt-5">
       <div className="container">

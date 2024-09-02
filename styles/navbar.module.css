@@ -332,11 +332,11 @@
 }
 
 .search_icon {
-  position: absolute;
-  right: 5px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
   cursor: pointer;
   color: white;
-  top: 15px;
 }
 
 .search_input {

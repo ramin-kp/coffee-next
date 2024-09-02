@@ -16,7 +16,6 @@ import { Pagination } from "swiper/modules";
 import TestimonialItem from "@/components/module/Testimonial/Testimonial";
 
 function Comments({ data }) {
-  console.log("comments=>", data);
   return (
     <div className="container-fluid py-5">
       <div className="container">

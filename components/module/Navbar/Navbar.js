@@ -1,10 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
+
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import * as Icons from "@fortawesome/free-solid-svg-icons";
 
 //style
 import styles from "@/styles/navbar.module.css";
+import { useRouter } from "next/router";
 
 function Navbar() {
+  const [search, setSearch] = useState("");
+
+  const route = useRouter();
+
+  const clickHandler = () => {
+    if (!search) {
+      alert("enter search text");
+    } else {
+      route.push(`/search?q=${search}`);
+    }
+  };
+  useEffect(() => {
+    setSearch(route.query.q);
+    if (!route.query.q) {
+      setSearch("");
+    }
+  }, [route.query.q]);
+
+  const keyDownHandler = (e) => {
+    if (e.keyCode !== 13) return;
+    route.push(`/search?q=${search}`);
+  };
+
   return (
     <div className={`container-fluid p-0 ${styles.nav_bar}`}>
       <nav
@@ -15,14 +45,18 @@ function Navbar() {
             Next-Coffee
           </h1>
         </Link>
-        <button
-          type="button"
-          className={`${styles.navbar_toggler}`}
-          data-toggle="collapse"
-          data-target="#navbarCollapse"
-        >
-          <span className={`${styles.navbar_toggler_icon}`}></span>
-        </button>
+        <div>
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className={`${styles.search_input}`}
+            onKeyDown={keyDownHandler}
+          />
+          <span className={`${styles.search_icon}`} onClick={clickHandler}>
+            <FontAwesomeIcon icon={Icons.faSearch} />
+          </span>
+        </div>
         <div
           className={`collapse ${styles.navbar_collapse} justify-content-between`}
           id="navbarCollapse"
